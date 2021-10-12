@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* 6. То есть ваша задача выводить слово «рубль» в правильном падеже, в зависимости от введенного числа. */
+
+    user_number = +prompt("Введите число:")
+
+    function post_str_func(num) {
+        num = num % 100;
+        switch (true) {
+            case num % 10 === 1 && num !== 11:
+                return 'ь';
+            case (num > 20 || num < 10) && num % 10 >= 2 && num % 10 <= 4:
+                return 'я';
+            default:
+                return 'ей';
+        }
+    }
+
+    post_str = post_str_func(user_number);
+    alert(`Ваша сумма в ${user_number} рубл${post_str} успешно зачислена.`);
+</script>
+</body>
+</html>
