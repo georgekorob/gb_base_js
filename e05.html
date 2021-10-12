@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /* 5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+    где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+    переданного значения операции (использовать switch) выполнить одну из арифметических операций
+    (использовать функции из задания 4) и вернуть полученное значение. */
+
+    function mathOperation(a, b, oper) {
+        switch (oper) {
+            case '+':
+                return a + b;
+            case '-':
+                return a - b;
+            case '/':
+                return b ? a / b : None;
+            case '*':
+                return a * b;
+            default:
+                return 0;
+        }
+    }
+
+    let a = 4, b = -2;
+    alert(`a + b = ${mathOperation(a, b, '+')}\na - b = ${mathOperation(a, b, '-')}
+a / b = ${mathOperation(a, b, '/')}\na * b = ${mathOperation(a, b, '*')}`);
+</script>
+</body>
+</html>
